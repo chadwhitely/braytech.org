@@ -29,4 +29,17 @@ Before you can build this project, you must install and configure one of the fol
 
        docker run --rm -v /path/to/git/repo/src:/usr/src/app/src -p 3000:3000/tcp braytech.org:latest
 
+### API Key
+
+You will need to create an api key for bungie.net by applying at https://www.bungie.net/en/Application . It will require the following pieces of information:
+
+- Application name: anything you'd like
+- Website: can be blank
+- OAuth client type: confidential
+- Redirect URL: your URL, localhost:3000 by default
+- No scopes needed
+- Origin header: similar to the Redirect URL, http://localhost:3000 by default
+
+Once created, copy all relevant fields to .env.development and refresh your environment.
+
 © Bungie, Inc. All rights reserved. Destiny, the Destiny Logo, Bungie and the Bungie logo are among the trademarks of Bungie, Inc.
